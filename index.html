@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Natéo Becquart | BTS SIO</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='10' y='70' font-family='monospace' font-size='60' fill='%2300ff66' font-weight='bold'%3E&gt;_%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Natéo<span class="cursor-blink">_</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets & TP</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="assets/mon_cv.pdf" class="btn-cv" target="_blank" download="Natéo_Becquart_CV.pdf">Mon CV <i class="fas fa-download"></i></a>
+        </nav>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>> Hello World,</h2>
+                <h1 class="accent-text" id="typewriter"></h1>
+                <p>Étudiant en BTS SIO.</p>
+                <div class="hero-actions" style="display: flex; align-items: center;">
+                    <a href="#projets" class="btn-primary" style="border: 1px solid transparent; margin-right: 15px;">Explorer mes projets</a>
+                    <a href="#contact" class="btn-outline">Me contacter</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="presentation" class="section presentation-section">
+        <div class="presentation-container">
+            <div class="presentation-image fade-in">
+                <div class="image-wrapper">
+                    <img src="photoportfolio.png" alt="Photo de profil">
+                </div>
+            </div>
+
+            <div class="presentation-text fade-in">
+                <h2>Bienvenue</h2>
+                <p>Étudiant en BTS SIO spécialisé en infrastructures et réseaux, je me passionne pour la cybersécurité et la protection des systèmes d'information. De la configuration d'architectures sécurisées au durcissement des systèmes, j'aime concevoir des environnements robustes et résilients. Rigoureux et en veille technologique constante face aux nouvelles menaces, mon objectif est de garantir l'intégrité, la confidentialité et la disponibilité des données.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours" class="section bg-dark-theme">
+        <h2 class="section-title text-white">Mon Parcours</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2024 - 2026</div>
+                <div class="timeline-content">
+                    <h3>BTS Services Informatiques aux Organisations</h3>
+                    <p>Lycée René Descartes - Spécialisation SISR</p>
+                    <span class="timeline-badge">En cours</span>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2021 - 2024</div>
+                <div class="timeline-content">
+                    <h3>Baccalauréat Professionnel</h3>
+                    <p>Lycée Clément Ader - Obtention du BAC Systèmes numériques et réseau</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="section bg-light">
+        <h2 class="section-title">Mes Compétences</h2>
+
+        <div class="skills-categories">
+            <div class="skill-category fade-in">
+                <h3 class="category-title"><i class="fas fa-code"></i> Développement Web</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3 class="category-title"><i class="fas fa-server"></i> Systèmes & Réseaux</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">GNU/Linux</span>
+                    <span class="skill-tag">Virtualisation</span>
+                    <span class="skill-tag">Routage & Commutation</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3 class="category-title"><i class="fas fa-tools"></i> Outils</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Visual Studio Code</span>
+                    <span class="skill-tag">PowerShell / Bash</span>
+                    <span class="skill-tag">GLPI</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Qualys</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section bg-dark-theme">
+        <h2 class="section-title text-white">Projets & Réalisations</h2>
+
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-badge">Développement Web</div>
+                <div class="project-info">
+                    <h3>Création de Site Web</h3>
+                    <p>Site en ligne complet, système de paiement et administration.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-badge">Système & Réseau</div>
+                <div class="project-info">
+                    <h3>Reconnaissance DNS & Sous-domaines</h3>
+                    <p>Audit de sécurité et cartographie de la surface d'attaque d'une infrastructure</p>
+                    <div class="project-tech">
+                        <span>Packet Tracer</span>
+                        <span>VLAN</span>
+                        <span>DHCP/DNS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-badge">TP Complets</div>
+                <div class="project-info">
+                    <h3>Ateliers Professionnels</h3>
+                    <p>Accédez à l'ensemble de mes TP documentés, corrigés et téléchargeables.</p>
+                    <div class="project-tech">
+                        <span>Rapports PDF</span>
+                        <span>Scripts</span>
+                        <span>Schémas</span>
+                    </div>
+                    <a href="tps.html" class="project-link">Consulter les TP <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="periode-professionnelle" class="section bg-light" style="background-color: #1a1a1a;">
+        <h2 class="section-title text-white">Période Professionnelle</h2>
+
+        <div class="presentation-container" style="align-items: stretch;">
+
+            <div class="presentation-text fade-in" style="display: flex; flex-direction: column; justify-content: center;">
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Durant ma période professionnelle, j'ai travaillé sur des missions concrètes en entreprise, renforçant mes compétences techniques et mon sens du travail en équipe.</p>
+                <p style="color: var(--text-light);">J'ai notamment participé à des projets de sécurisation de réseau, d'automatisation et de support technique, tout en respectant les bonnes pratiques de documentation et de suivi.</p>
+            </div>
+
+            <div class="project-card fade-in" style="background: var(--primary-dark); border-color: var(--accent-color); display: flex; flex-direction: column; justify-content: center; padding: 2.5rem;">
+                <h3 style="color: var(--white); font-size: 1.4rem; margin-bottom: 0.5rem; font-family: monospace;">>_ Rapports de Mission</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem;">Accédez à mes rapports détaillés en téléchargement sécurisé.</p>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="assets/rapport_reseau.pdf" class="btn-primary" target="_blank" download="Rapport_Reseau.pdf" style="margin: 0; padding: 0.7rem 1.2rem; font-size: 0.9rem;">Réseau</a>
+                    <a href="assets/rapport_cyber.pdf" class="btn-primary" target="_blank" download="Rapport_Cyber.pdf" style="margin: 0; padding: 0.7rem 1.2rem; font-size: 0.9rem;">Cybersécurité</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <section id="contact" class="section bg-dark-theme" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <h2 class="section-title" style="margin-bottom: 2rem;">Me Contacter</h2>
+        <div class="contact-container fade-in">
+            <p class="contact-subtitle" style="margin-bottom: 2rem;">> Prêt à collaborer sur de nouveaux projets.</p>
+
+            <div class="contact-content" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+
+                <div class="contact-item fade-in" style="flex: 1 1 300px; max-width: 380px; padding: 1.5rem; display: flex; align-items: center; text-align: left; gap: 1.5rem;">
+                    <i class="fas fa-envelope" style="margin: 0; font-size: 2.2rem; flex-shrink: 0;"></i>
+                    <div style="min-width: 0;">
+                        <h4 style="margin-bottom: 0.2rem;">Email</h4>
+                        <a href="mailto:nateo.becquart77340@gmail.com" class="email-link" style="font-size: 0.85rem; word-break: break-all; display: block;">nateo.becquart77340@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item fade-in" style="flex: 1 1 300px; max-width: 380px; padding: 1.5rem; display: flex; align-items: center; text-align: left; gap: 1.5rem;">
+                    <i class="fas fa-phone" style="margin: 0; font-size: 2.2rem; flex-shrink: 0;"></i>
+                    <div style="min-width: 0;">
+                        <h4 style="margin-bottom: 0.2rem;">Téléphone</h4>
+                        <p style="margin: 0;">06.52.92.81.32</p>
+                    </div>
+                </div>
+
+                <div class="contact-item fade-in" style="flex: 1 1 300px; max-width: 380px; padding: 1.5rem; display: flex; align-items: center; text-align: left; gap: 1.5rem;">
+                    <i class="fas fa-map-marker-alt" style="margin: 0; font-size: 2.2rem; flex-shrink: 0;"></i>
+                    <div style="min-width: 0;">
+                        <h4 style="margin-bottom: 0.2rem;">Localisation</h4>
+                        <p style="margin: 0;">Paris</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/nat%C3%A9o-becquart-98835b27a/" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/NaterorX" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" title="Discord" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light" style="padding: 2rem; text-align: center; border-top: 1px solid rgba(0,255,102,0.1);">
+        <p style="margin: 0; font-family: monospace; color: var(--text-light);">&copy; 2026 Becquart Natéo - BTS SIO</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

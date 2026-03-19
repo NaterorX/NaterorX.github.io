@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes TPs et Réalisations | Terminal</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='10' y='70' font-family='monospace' font-size='60' fill='%2300ff66' font-weight='bold'%3E&gt;_%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .tp-container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        .tp-header { text-align: center; margin-bottom: 50px; color: var(--white); }
+        .tp-header h1 { margin-bottom: 10px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--text-light); text-decoration: none; font-weight: bold; font-family: monospace; transition: 0.3s; }
+        .back-btn:hover { color: var(--accent-color); text-shadow: 0 0 8px var(--accent-color); transform: translateX(-5px);}
+
+        /* Style de la liste simple */
+        .tp-list { display: flex; flex-direction: column; gap: 15px; list-style: none; padding: 0; }
+
+        .tp-item {
+            background: var(--bg-light);
+            padding: 20px 25px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-left: 4px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .tp-item:hover {
+            transform: translateX(10px);
+            border-left: 4px solid var(--accent-color);
+            background: var(--primary-dark);
+            box-shadow: 0 0 15px rgba(0,255,102,0.05);
+        }
+
+        .tp-title { font-weight: 600; font-size: 1.15rem; color: var(--white); font-family: monospace; margin-bottom: 5px; }
+        .tp-title i { color: var(--accent-color); margin-right: 8px; }
+        .tp-desc { font-size: 0.95rem; color: var(--text-light); }
+
+        .download-btn {
+            color: var(--primary-dark);
+            background: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .download-btn:hover { background: var(--white); box-shadow: 0 0 15px rgba(0,255,102,0.4); }
+
+        /* Responsive pour mobile */
+        @media(max-width: 600px){
+            .tp-item { flex-direction: column; text-align: left; align-items: flex-start; gap: 15px; }
+            .download-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tp-container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> cd .. /Retour au Portfolio</a>
+
+        <div class="tp-header fade-in">
+            <h1>>_ Mes Travaux Pratiques</h1>
+            <p>Liste complète des ateliers de professionnalisation et TP réalisés en BTS SIO.</p>
+        </div>
+
+        <ul class="tp-list">
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-shield-alt"></i> TP 01 : Configuration Firewall & DNS</div>
+                    <div class="tp-desc">Mise en place d'un firewall pfSense, configuration DNS (Bind9) et règles de filtrage WAN/LAN/DMZ.</div>
+                </div>
+                <a href="assets/Firewall.pdf" class="download-btn" target="_blank" download="TP_Firewall_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-bug"></i> TP 02 : Exploitation de Faille XSS</div>
+                    <div class="tp-desc">Exploitation d'une vulnérabilité XSS (Client-Side Security) via Mutillidae et analyse de requêtes avec Burp Suite.</div>
+                </div>
+                <a href="assets/XSS%20ATTAQUE%20-%20DIGNAN.pdf" class="download-btn" target="_blank" download="TP_XSS_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-chart-line"></i> TP 03 : Supervision Serveur Web</div>
+                    <div class="tp-desc">Installation de Lighttpd, mise en place d'une supervision légère avec MOTDstat et configuration d'alertes par mail.</div>
+                </div>
+                <a href="assets/supervision.pdf" class="download-btn" target="_blank" download="TP_Supervision_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-ticket-alt"></i> TP 04 : Gestion des Incidents (ITIL)</div>
+                    <div class="tp-desc">Analyse et résolution d'un dysfonctionnement réseau (MPLS, OSPF) selon les bonnes pratiques ITIL.</div>
+                </div>
+                <a href="assets/Gestion_incident.pdf" class="download-btn" target="_blank" download="TP_Gestion_Incident_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fab fa-windows"></i> TP 05 : Déploiement VM Windows 10</div>
+                    <div class="tp-desc">Installation, configuration réseau et création de comptes utilisateurs d'une machine virtuelle Windows 10 sous VirtualBox.</div>
+                </div>
+                <a href="assets/VMwin10.pdf" class="download-btn" target="_blank" download="TP_VM_Win10_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-box-open"></i> TP 06 : Installation Logiciels sous Linux</div>
+                    <div class="tp-desc">Déploiement d'une VM Ubuntu Mate et installation d'utilitaires système et bureautique (Conky, ClamAV, WPS Office).</div>
+                </div>
+                <a href="assets/Installation_logiciel.pdf" class="download-btn" target="_blank" download="TP_Install_Logiciels_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fab fa-linux"></i> TP 07 : Configuration GNU/Linux</div>
+                    <div class="tp-desc">Création d'une VM Linux, configuration des interfaces réseaux et gestion des utilisateurs en ligne de commande.</div>
+                </div>
+                <a href="assets/Syst%C3%A8me_virtuel.pdf" class="download-btn" target="_blank" download="TP_Systeme_Virtuel_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-terminal"></i> TP 08 : Commandes CLI & Accès SSH</div>
+                    <div class="tp-desc">Utilisation des commandes usuelles Debian, manipulation de fichiers et configuration d'un accès distant sécurisé (OpenSSH).</div>
+                </div>
+                <a href="assets/VMlinux.pdf" class="download-btn" target="_blank" download="TP_VM_Linux_SSH_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-microchip"></i> TP 09 : Analyse Documentation Matérielle</div>
+                    <div class="tp-desc">Étude des caractéristiques techniques et identification des composants d'une carte mère (ASRock Fatal1ty B450).</div>
+                </div>
+                <a href="assets/Carte_m%C3%A8re.pdf" class="download-btn" target="_blank" download="TP_Carte_Mere_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-desktop"></i> TP 10 : Recherche de Composants PC</div>
+                    <div class="tp-desc">Sélection de composants matériels compatibles (CPU, RAM, GPU, Alimentation) pour constituer une configuration complète.</div>
+                </div>
+                <a href="assets/Constitution_machine.pdf" class="download-btn" target="_blank" download="TP_Composants_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-network-wired"></i> TP 11 : Navigation IOS Cisco</div>
+                    <div class="tp-desc">Prise en main de Cisco IOS sous Packet Tracer : accès console, modes d'exécution et commandes de base.</div>
+                </div>
+                <a href="assets/packettracer.pdf" class="download-btn" target="_blank" download="TP_Navigation_IOS_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-wifi"></i> TP 12 : Déploiement Réseau Sans Fil</div>
+                    <div class="tp-desc">Conception d'un LAN sans fil avec routeur WRT300N, configuration du serveur DHCP et sécurisation des points d'accès.</div>
+                </div>
+                <a href="assets/Lab_wifi.pdf" class="download-btn" target="_blank" download="TP_Wifi_WRT300N_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-signal"></i> TP 13 : Extension & Sécurité Sans Fil</div>
+                    <div class="tp-desc">Paramétrage étendu : gestion des canaux, sécurité WPA2-Personal, liaison de points d'accès et renouvellement DHCP.</div>
+                </div>
+                <a href="assets/packettracer_wireless_conf.pdf" class="download-btn" target="_blank" download="TP_Wifi_Avance_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-server"></i> TP 14 : Réseau WPA2-Enterprise (WLC)</div>
+                    <div class="tp-desc">Déploiement d'un contrôleur WLAN (WLC), création d'interfaces VLAN et authentification via serveur RADIUS et SNMP.</div>
+                </div>
+                <a href="assets/packettracer_vlan.pdf" class="download-btn" target="_blank" download="TP_WLC_RADIUS_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+            <li class="tp-item fade-in">
+                <div>
+                    <div class="tp-title"><i class="fas fa-project-diagram"></i> TP 15 : Prévention des Boucles (STP)</div>
+                    <div class="tp-desc">Étude et vérification du protocole Spanning Tree (STP) pour la prévention des boucles et la redondance réseau.</div>
+                </div>
+                <a href="assets/packettracer_prevention.pdf" class="download-btn" target="_blank" download="TP_STP_Becquart.pdf">Télécharger <i class="fas fa-download"></i></a>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
