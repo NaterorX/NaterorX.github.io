@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Veille Technologique | Terminal</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='10' y='70' font-family='monospace' font-size='60' fill='%2300ff66' font-weight='bold'%3E&gt;_%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .veille-wrapper { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--text-light); text-decoration: none; font-weight: bold; font-family: monospace; transition: 0.3s; }
+        .back-btn:hover { color: var(--accent-color); text-shadow: 0 0 8px var(--accent-color); transform: translateX(-5px);}
+
+        /* Grille séparée en 2 colonnes */
+        .veille-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        /* Style de la partie gauche (Texte) */
+        .veille-text { font-size: 1.05rem; color: var(--text-light); line-height: 1.8; }
+        .veille-text h2 { color: var(--white); font-family: monospace; font-size: 2.2rem; margin-bottom: 1.5rem; line-height: 1.3;}
+        .veille-text h2 i { color: var(--accent-color); margin-right: 10px; }
+        .veille-text p { margin-bottom: 1.5rem; }
+        .veille-badge {
+            display: inline-block;
+            background: rgba(0,255,102,0.1);
+            color: var(--accent-color);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+            border: 1px solid var(--accent-color);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style de la partie droite (Cartes) */
+        .source-card {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.8rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .source-card:hover {
+            transform: translateX(-10px);
+            box-shadow: 0 5px 25px rgba(0,255,102,0.1);
+            background: var(--primary-dark);
+        }
+        .source-card h4 { color: var(--white); font-family: monospace; font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .source-card p { color: var(--text-light); font-size: 0.95rem; margin: 0;}
+
+        /* Animations douces sur les côtés */
+        .slide-right { animation: slideRight 1s ease-out forwards; opacity: 0; }
+        .slide-left { animation: slideLeft 1s ease-out forwards; opacity: 0; }
+
+        /* Décalage d'animation pour un effet stylé */
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+
+        @keyframes slideRight {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideLeft {
+            0% { opacity: 0; transform: translateX(50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Responsive pour mobile */
+        @media (max-width: 900px) {
+            .veille-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="veille-wrapper">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> cd .. /Retour au Portfolio</a>
+
+        <div class="veille-grid">
+            <div class="veille-text slide-right">
+                <h2><i class="fas fa-satellite-dish"></i> Ma Veille Technologique</h2>
+                <p>La veille technologique consiste à s'informer en continu sur les nouveautés du secteur de l'informatique afin d'anticiper les évolutions et de maintenir ses compétences à jour.</p>
+                <p>En tant que futur expert en <strong>Infrastructures, Réseaux et Cybersécurité</strong>, je surveille quotidiennement les nouvelles vulnérabilités (CVE), l'évolution des protocoles réseaux et les innovations cloud.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 2.5rem; margin-bottom: 1.5rem; font-family: monospace; font-size: 1.2rem;">>_ Outils de curation</h3>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="veille-badge">Feedly (Flux RSS)</span>
+                    <span class="veille-badge">X (InfoSec)</span>
+                    <span class="veille-badge">Google Alerts</span>
+                    <span class="veille-badge">Newsletters</span>
+                </div>
+            </div>
+
+            <div class="veille-visual">
+                <h3 class="slide-left" style="color: var(--white); font-family: monospace; font-size: 1.4rem; margin-bottom: 1.5rem;">>_ Mes Sources Principales</h3>
+
+                <div class="source-card slide-left delay-1">
+                    <h4><i class="fas fa-shield-alt" style="color: var(--accent-color); margin-right: 8px;"></i> ANSSI & CERT-FR</h4>
+                    <p>Suivi des alertes de sécurité, des bulletins d'actualité et des recommandations officielles de l'État français en matière de cybersécurité.</p>
+                </div>
+
+                <div class="source-card slide-left delay-2">
+                    <h4><i class="fas fa-network-wired" style="color: var(--accent-color); margin-right: 8px;"></i> Cisco News & BleepingComputer</h4>
+                    <p>Surveillance des évolutions des équipements réseaux, des mises à jour IOS, et des dernières attaques par ransomware.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
